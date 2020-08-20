@@ -1,2 +1,3 @@
 # vcmp-server-info
- Get VCMP Server Information
+
+Get VCMP server info
