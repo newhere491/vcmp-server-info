@@ -14,7 +14,7 @@ app.listen(Port, "0.0.0.0", () => {
 app.get("/:host/:port", async (req, res) => {
   var host = req.params.host;
   var port = req.params.port;
-  Gamedig.query({
+  await Gamedig.query({
     type: "vcmp",
     host,
     port,
