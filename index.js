@@ -11,6 +11,15 @@ app.listen(Port, "0.0.0.0", () => {
   console.log(`Started VCMP activity monitor on the port ${Port}.`);
 });
 
+app.use(async (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 app.get("/:host/:port", async (req, res) => {
   var host = req.params.host;
   var port = req.params.port;
